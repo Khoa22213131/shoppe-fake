@@ -1,0 +1,130 @@
+:root {
+    --white-color : #fff;
+    --brand-primary-color: #ee4d2d;
+    
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.4rem;
+}
+
+.primary-text-color {
+    color: #ff6633;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid__column-1 {
+    width: 100%;
+}
+
+.grid__column-2 {
+    width: 16.666%;
+}
+
+.grid__column-10 {
+    width: 83.333%;
+}
+
+.grid__column--product {
+    width: 20%;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Poppin {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(var(--grow-from));
+    }
+    to {
+        transform: scale(var(--grow-to)) ;
+    }
+}
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0,0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: FadeIn linear 0.2s;
+}
+
+.modal__body {
+    --grow-from : 0.6;
+    --grow-to : 1;
+    background-color:#fff;
+    border-radius: 5px;
+    margin: auto;
+    z-index: 1;
+    width: 450px;
+    animation: grow ease-in 0.2s;
+}
+
+div#display-flex {
+    display: flex !important;
+    transition: var(--brand-primary-color) 0.2s;
+}
+
+div#display-none {
+    display: none;
+}
+                            
+                            
+                            
+                            
+                            
+                            
